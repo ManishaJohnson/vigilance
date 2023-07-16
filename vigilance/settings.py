@@ -137,12 +137,3 @@ STATICFILES_DIRS=[
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static/csv'),
-    os.path.join(BASE_DIR, 'static/gif'),
-    os.path.join(BASE_DIR, 'static/images'),
-    os.path.join(BASE_DIR, 'static/javascript'),
-    os.path.join(BASE_DIR, 'static/stylesheet'),
-    os.path.join(BASE_DIR, 'static/video')
-]
-

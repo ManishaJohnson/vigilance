@@ -6,7 +6,7 @@
       }
     ],
     "routes": [
-      { "src": "/static/(.*)", "dest": "/static/$1" },
+      { "src": "/static/(.*)", "dest": "static/$1" },
       { "src": "/(.*)", "dest": "vigilance/wsgi.py" }
     ],
     "env": {
@@ -15,9 +15,6 @@
       "DJANGO_READ_DOT_ENV_FILE": "true"
     },
     "server": {
-      "command": "python manage.py runserver 0.0.0.0:$PORT",
-      "env": {
-        "STATIC_ROOT": "staticfiles"
-      }
+      "command": "python manage.py runserver 0.0.0.0:$PORT"
     }
   }
