@@ -6,6 +6,18 @@
       }
     ],
     "routes": [
+      { "src": "/static/(.*)", "dest": "/static/$1" },
       { "src": "/(.*)", "dest": "vigilance/wsgi.py" }
-    ]
+    ],
+    "env": {
+      "VERCEL": "1",
+      "DJANGO_SETTINGS_MODULE": "vigilance.settings",
+      "DJANGO_READ_DOT_ENV_FILE": "true"
+    },
+    "server": {
+      "command": "python manage.py runserver 0.0.0.0:$PORT",
+      "env": {
+        "STATIC_ROOT": "staticfiles"
+      }
+    }
   }
