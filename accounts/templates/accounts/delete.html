@@ -1,0 +1,17 @@
+{% extends "accounts/base.html" %}
+{% load static %}
+{% block content %}
+<form method="POST" action="" id="register">
+    <h1> Delete</h1>
+    {% csrf_token %}
+
+    <div class="form-group">
+        <label for="id">ID</label>
+        <input type="text" name="username" placeholder="Please enter the ID" class="textinp">
+    </div>
+
+    <button class="btn">Submit</button>
+
+</form>
+{% endblock content %}
+

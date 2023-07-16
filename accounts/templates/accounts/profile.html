@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="{% static 'stylesheet/profile.css' %}">
+</head>
+<body>
+{% include 'crimeDetection/main_layout.html' %}
+<div class="main">
+<div class="admin-fun">
+	<div class="container">
+		<div class="headerprof">
+		<div class="admin-det">
+				<img src="{% static 'images/admin.jpg' %}" alt="admin" class="image_icon"> 
+				<h2>Welcome</h2>
+		</div>
+		</div>
+		<div class="content">
+		{% if user.first_name %}
+		<h5><b>first Name:</b> {{user.first_name}} </h5>
+		<br>
+		{% endif %}
+
+		{% if user.last_name %}
+		<h5><b>Last Name:</b> {{user.last_name}} </h5>
+		<br>
+		{% endif %}
+
+		<h5><b>ID: </b>{{user.username}} </h5>
+		<br>
+		<h5><b>Email: </b>{{user.email}} </h5>
+		</div>	
+</div>
+<div class="services">
+	
+	<div class="func1">
+		<ion-icon class="icons" name="create-outline"></ion-icon>
+		<h3>Create Admin</h3>
+		<a href="{% url 'admin-creation' %}"> <ion-icon class="icons" name="arrow-forward"></ion-icon></a>
+	</div>
+	<div class="func2">
+		<ion-icon class="icons" name="create-outline"></ion-icon>
+		<h3>Report Crime</h3>
+		<a href="{% url 'crime-report' %}"> <ion-icon class="icons" name="arrow-forward"></ion-icon> </a>
+	</div>
+	<div class="func3">
+		<ion-icon class="icons" name="create-outline"></ion-icon>
+		<h3>Edit information</h3>
+		<a href="{% url 'info-update' %}"> <ion-icon class="icons" name="arrow-forward"></ion-icon> </a>
+	</div>
+
+	<div class="func4">
+		<ion-icon class="icons" name="create-outline"></ion-icon>
+		<h3>Delete</h3>
+		<a href="{% url 'delete' %}"> <ion-icon class="icons" name="arrow-forward"></ion-icon> </a>
+	</div>
+
+</div>
+</div>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

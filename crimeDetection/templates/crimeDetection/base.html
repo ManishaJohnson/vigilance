@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="{% static 'stylesheet/base.css' %}" rel="stylesheet" type="text/css">
+
+        <title>Hotspot Mapping for Crime Detection</title>
+</head>
+
+<body>
+{% include 'crimeDetection/main_layout.html' %}
+
+<section class="showcase">
+<video src="{% static 'video/cvr.mp4' %}" muted loop autoplay></video>
+<div class="overlay"></div>
+<div class="text">
+    
+<h2>Hotspot Mapping for Crime Detection</h2>
+<p>
+    <h3>An initiative to raise awareness and make Indian Districts Safer</h3>
+</p>
+<p>The application identifies high-crime locations and highlights the places that demand additional police and law enforcement presence. Some of the popular criminal categories for classification in the Indian Penal Code include the Narcotic Drugs & Psychotropic Substances Act, the Gambling Act, the Arms Act, the Immoral Traffic Prevention Act, the Mineral and Mining Act, and the Goonda Act.</p>
+
+
+
+<a href="{% url 'services-page' %}">Explore</a>
+
+</div>
+</section>
+
+<script src="{% static 'javascript/base.js' %}"></script>
+
+   </body>
+</html>

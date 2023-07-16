@@ -1,0 +1,40 @@
+{% extends "accounts/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<form method="post" id="register">
+    <h1> Create Admin</h1>
+    {% csrf_token %}
+
+    <div class="form-group">
+        <label for="state">Enter your First name</label>
+        <input type="text" name="first_name" placeholder="First Name" class="textinp" required>
+    </div>
+
+    <div class="form-group">
+       <label for="state">Enter your Last name</label>
+    <input type="text" name="last_name" placeholder="Last Name" class="textinp" required>
+    </div>
+    <div class="form-group">
+       <label for="state">ID</label>
+    <input type="text" name="username" placeholder="ID" class="textinp" required>
+    </div>
+    <div class="form-group">
+
+        <label for="state">Email</label>
+    <input type="email" name="email" placeholder="email"  class="textinp" required>
+    </div>
+    <div class="form-group">
+        <label for="state">Password</label>
+    <input type="password" name="password1" placeholder="Password" class="textinp" required>
+</div>
+<div class="form-group">
+     <label for="state">Confirm Password</label>
+    <input type="password" name="password2" placeholder="Confirm Password" class="textinp" required>
+</div>
+    <button class="btn">Create</button>
+</form>
+
+{% endblock content %}
+

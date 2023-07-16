@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #EFEFEF;
+}
+
+.body-content {
+    min-height: 85vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    padding: 40px 50px 10px 50px;
+}
+
+.slide-container {
+    max-width: 1120px;
+    width: 100%;
+}
+
+.slide-content {
+    margin: 0 40px;
+    overflow: hidden;
+}
+
+.swipe {
+    border-radius: 25px;
+    background-color: #FFF;
+}
+
+.image-content,
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+.image-content {
+    position: relative;
+    row-gap: 5px;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #F88379;
+    border-radius: 25px 25px 0 25px;
+}
+
+.crime-image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #FFF;
+    padding: 3px;
+}
+
+.crime-image .crime-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #F88379;
+}
+
+.crime {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+.description {
+    font-size: 14px;
+    font-weight: 500;
+    color: #707070;
+    text-align: center;
+}
+
+.btn {
+    border: none;
+    font-size: 16px;
+    color: #FFF;
+    padding: 8px 16px;
+    background-color: #F88379;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #463f3a;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #463f3a;
+}
+
+.swipe {
+    flex: 0 0 100%; /* Set the flex basis to 100% to occupy the entire width of the container */
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .swipe {
+      flex-basis: calc(93% / 3); /* Set the flex basis to 33.33% to accommodate 3 boxes per row */
+    }
+  }
+  

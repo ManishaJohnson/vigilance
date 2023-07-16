@@ -1,0 +1,185 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Swiper CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
+    <!-- CSS-->
+    <link href="{% static 'stylesheet/gp_home.css' %}" rel="stylesheet" type="text/css">
+
+    <title></title>
+</head>
+<body>
+    {% include 'crimeDetection/main_layout.html' %}
+
+    <div class="body-content">
+        <div class="slide-container swiper">
+            <div class="slide-content">
+                <div class="crime-wrap swiper-wrapper">
+                    <!-- Add your swiper slides here -->
+                    <!-- Crime 1 -->
+                    <div class="swipe swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+        
+                            <div class="crime-image">
+                                <img src="{% static 'images/drugs.jpg' %}" alt="" class="crime-img">
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <h2 class="crime">1 NDPS Act</h2>
+                                <p class="description">
+                                <br>
+                               The NDPS Act forbids the production, possession, consumption, sale, purchase, transport, and storage of any narcotic or psychotropic substance
+                        
+                                </p>
+                        <br>
+                        <p class="description">To discover the hotspots nearby, click here</p>
+                        
+                        <a href="{% url 'district-map' %}" class="btn">View Stats</a>
+                        </div>
+                    </div>
+                    <!-- 2nd crime-->
+
+                    <div class="swipe swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="crime-image">
+                                <img src="{% static 'images/gambling.jpeg'%}" alt="" class="crime-img">
+                            </div>
+                        </div>
+
+                        <div class="content">
+                        <h2 class="crime">2 Gambling Act</h2>
+                        <br>
+                        <p class="description">
+                        The Public Gambling Act  is a law that prohibits running or being in charge of a public gambling house.  The Act also prohibits visiting gambling houses.
+
+                        </p>
+                        <br>
+                        <p class="description">To discover the hotspots nearby, click here</p>
+                        <a href="{% url 'crime-gambling' %}" class="btn">View Stats</a>
+                        </div>
+                    </div>
+
+
+
+                    <!-- 3rd crime-->
+                    <div class="swipe swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="crime-image">
+                                <img src="{% static 'images/arms.jpg' %}" alt="" class="crime-img">
+                            </div>
+                        </div>
+
+
+                        <div class="content">
+                        <h2 class="crime">3 Arms Act</h2>
+                        <br>
+                        <p class="description">
+                        The Arms Act is an Act  to consolidate and amend the law relating to arms and ammunition in order to curb illegal weapons and violence stemming from them
+
+                        </p>
+                        <br>
+                        <p class="description">To discover the hotspots nearby, click here</p>
+
+                        <a href="{% url 'crime-arms' %}" class="btn">View Stats</a>
+                        </div>
+                    </div>
+
+
+                    <!-- 4th crime-->
+                    <div class="swipe swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="crime-image">
+                                <img src="{% static 'images/mining.jpeg' %}" alt="" class="crime-img">
+                            </div>
+                        </div>
+
+                        <div class="content">
+                        <h2 class="crime">4 Mines and Mineral Act</h2>
+                        <br>
+                        <p class="description">
+                        The Mines and Minerals Act, regulates the mining sector in India and specifies the requirement for obtaining and granting mining leases for mining operations.
+
+                        </p>
+                        <br>
+                        <p class="description">To discover the hotspots nearby, click here</p>
+
+                        <a href="{% url 'crime-mining' %}" class="btn">View Stats</a>
+                        </div>
+                    </div>
+
+
+
+                    <!-- 5th crime-->
+                    <div class="swipe swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="crime-image">
+                                <img src="{% static 'images/trafficking.jpg' %}" alt="" class="crime-img">
+                            </div>
+                        </div>
+
+                        <div class="content">
+                        <h2 class="crime">5 Immoral Traffic Prevention Act</h2>
+                        <br>
+                        <p class="description">
+                        The immoral and traffic prevention act includes immoral trafficking and prostitution in women and children in India an offence punishable under the act.
+                        </p>
+                        <br>
+                        <p class="description">To discover the hotspots nearby, click here</p>
+
+                        <a href="{% url 'crime-traffic' %}" class="btn">View Stats</a>
+                        </div>
+                    </div>
+
+
+                    <!-- 6th crime-->
+                    <div class="swipe swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="crime-image">
+                                <img src="{% static 'images/goonda.jpeg' %}" alt="" class="crime-img">
+                            </div>
+                        </div>
+
+                        <div class="content">
+                        <h2 class="crime">6 Goonda Act</h2>
+                        <br>
+                        <p class="description">
+                        The Goonda Act is a law to make special provisions for the control and suppression of Goondas with a view to the maintenance of public order. 
+
+                        </p>
+                        <br>
+                        <p class="description">To discover the hotspots nearby, click here</p>
+
+                        <a href="{% url 'crime-goonda' %}" class="btn">View Stats</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="{% static 'javascript/script.js' %}"></script>
+</body>
+</html>

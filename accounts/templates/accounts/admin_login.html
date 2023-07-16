@@ -1,0 +1,32 @@
+{% extends "accounts/base.html" %}
+{% load static %}
+{% block content %}
+
+<form method="POST" action="" id="register">
+    <h1> Admin Log In</h1>
+    {% csrf_token %}
+
+    {% if user.is_authenticated and not user.is_superuser %}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+        swal('You are authenticated as {{user.username}}, but are not authorized to access this page. Would you like to login to a different account?')
+        </script>
+     {% endif %}
+
+
+    <div class="form-group">
+       <label for="state">Please Enter your ID</label>
+    <input type="text" name="username" placeholder="ID" class="textinp" required>
+    </div>
+
+    <div class="form-group" >
+        <label for="state">Enter Password</label>
+        <input type="password" name="password" placeholder="Password" required class="textinp">
+    </div>
+
+    <button class="btn">LogIn</button>
+
+</form>
+
+{% endblock content %}
+

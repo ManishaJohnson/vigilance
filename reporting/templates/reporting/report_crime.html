@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>  </title>
+    <link rel="stylesheet" href="{% static 'stylesheet/register.css' %}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+
+
+<body>
+
+  {% include 'crimeDetection/main_layout.html' %}
+  <div class="main" ></div>
+<div class="register">
+
+<h2>Report Crime</h2>
+<form method="post" id="register">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="state">Select State/UT</label>
+    <select name="state" id="state" class="textinp" onchange="populate(this.id,'district')" required>
+      <option selected disabled value="">Please select a State/UT</option>
+        {% for state in states %}
+        <option value="{{state}}">{{state|safe}}
+        </option>
+        {% endfor %}
+        </select>
+  </div>
+
+  <div class="form-group">
+    <label for="e">Select District  (Select State/UT first )</label>
+     <select name="district" id="district" class="textinp">
+     </select>
+  </div>
+  
+  <div class="form-group">
+    <label for="crime">Choose Crime</label>
+    <select name="crime" class="textinp" required>
+      <option selected disabled value="">Please select a crime</option>
+        <option value="ndps">NDPS</option>
+        <option value="arms">Arms</option>
+        <option value="gambling">Gambling</option>
+        <option value="mining">Mineral and Mining</option>
+        <option value="trafficking">Trafficking</option>
+        <option value="goonda">Goonda</option>
+        </select>
+  </div>
+  
+  <div class="form-group">
+    <label for="Date">Enter date in the format 'm/d/yyyy'</label>
+    <input type="text" class="textinp"  placeholder="Enter date" name="date" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="count">Count</label>
+    <input type="text" class="textinp"  placeholder="Crime count" name="count" required>
+  </div>
+  
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form> 
+</div> <!-- End Register here-->
+</div> <!-- End Main here-->
+
+<script src="{% static 'javascript/report.js' %}"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<div>
+    <script>
+</script>
+</div>
+</body>
+</html>

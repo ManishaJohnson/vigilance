@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="{% static 'stylesheet/districtMap.css' %}" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    {% include 'crimeDetection/main_layout.html' %}
+<div class="map-container">
+
+<div class="state-analysis">
+    <div class="state-dropdown">
+    <form action="" method="POST">
+    {% csrf_token %}
+
+    <div class="state">
+        <h3>Please select a state</h3>
+        <select name="dropdown">
+        {% for state in states %}
+        <option value="{{state}}">{{state|safe}}
+        </option>
+        {% endfor %}
+        </select>
+    </div>
+
+    <button class="btn">Generate</button>
+    </form>
+    </div>
+
+
+    <div class="table-analysis">
+        <h4>{{msg}} </h4>
+        <br>
+        {{analysis|safe}}
+        <br>
+    </div>
+</div>
+
+    <div class="map-section">
+            {{map|safe}}
+    </div>
+
+
+</div>
+</body>
+</html>

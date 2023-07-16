@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="{% static 'stylesheet/main_layout.css' %}" rel="stylesheet" type="text/css">
+
+        <title></title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="{% url 'app-home' %}" class="nav-logo">Vigilance</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="{% url 'app-home' %}" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="{% url 'services-page' %}" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="{% url 'public' %}" class="nav-link">Dashboard</a></li>
+                {% if user.is_authenticated %}
+                    <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link">Logout</a></li>
+                {% endif %}
+                
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+     <script src="{% static 'javascript/main_layout.js' %}"></script>
+
+</body>
+</html>
+
+

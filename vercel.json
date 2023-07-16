@@ -1,0 +1,11 @@
+{
+    "builds": [
+      {
+        "src": "vigilance/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "vigilance/wsgi.py" }
+    ]
+  }

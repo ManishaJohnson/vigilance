@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family:'Poppins',sans-serif;
+
+}
+body{
+    background:#EFEFEF;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Navigation color*/
+.navbar{
+    background:#131E30;
+    border-bottom: 0.5px solid pink;
+}
+
+.nav-logo {
+    color: #EFEFEF;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+}
+
+.navbar ul {
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 5px 15px;
+}
+
+.navbar ul li a{
+    color: #EFEFEF;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+a.active, a:hover {
+    color: pink !important;
+    transition: .5s;
+}
+
+/* Hamburger style*/
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #EFEFEF;
+}
+
+.active .bar {
+    background-color: pink; /* Change the color to light pink */
+  }
+
+@media only screen and (max-width: 952px) {
+
+
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #463f3a;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        transform: translateY(-100%); /* Move the menu off-screen initially */
+        opacity: 0; /* Hide the menu initially */
+        z-index: 999; /* Ensure the menu appears above other elements */
+      }
+    
+      .nav-menu.active {
+        transform: translateY(0%); /* Move the menu down to visible position */
+        opacity: 1; /* Show the menu */
+      }
+    
+      .nav-item {
+        margin: 2.5rem 0;
+      }
+    
+      .navbar ul li{
+        line-height: 55px;
+    }
+      .hamburger {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        cursor: pointer;
+        z-index: 1000; /* Ensure the hamburger appears above other elements */
+      }
+  }
