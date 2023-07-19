@@ -1,5 +1,8 @@
 from django.urls import path,include
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('register/', views.register,name='register'),
     path('admin_login/', views.admin,name='admin'),
@@ -10,3 +13,5 @@ urlpatterns = [
     path('update/', views.update_info,name='info-update'),
     path('delete/', views.delete,name='delete'),
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT )

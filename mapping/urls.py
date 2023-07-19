@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.gp_home,name='public'),
@@ -11,3 +13,4 @@ urlpatterns = [
    	path('trafficking', views.traffic_districtMap,name='crime-traffic'),
    	path('goonda', views.goonda_districtMap,name='crime-goonda'),
 ]
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT )
