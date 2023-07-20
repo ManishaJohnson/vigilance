@@ -3,6 +3,7 @@ branca==0.6.0
 certifi==2023.5.7
 charset-normalizer==3.2.0
 Django==4.2.3
+psycopg2-binary==2.9.6
 folium==0.14.0
 fontawesomefree==6.4.0
 geographiclib==2.0
