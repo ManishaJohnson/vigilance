@@ -1,5 +1,5 @@
 # Vigilance
-Crime Hotspot Mapping Website
+Crime Hotspot Mapping Website using Django Framework
 
 ##  Click here to see deployed projects(https://ckay1999.pythonanywhere.com/)
     ```
