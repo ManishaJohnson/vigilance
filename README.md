@@ -1,6 +1,12 @@
 # Vigilance
 Crime Hotspot Mapping Website
 
+##  Click here to see deployed projects(https://ckay1999.pythonanywhere.com/)
+    ```
+    Username: root 
+    Password: root
+    ```
+
 ## Introduction
 It is frequently observed that crimes do not happen at random; rather, time and place have an impact on criminal behavior and the victimization of people. Finding hotspots/zones where a specific crime is more common is therefore crucial to resolving crime concerns. Hotspot mapping is a common analytical methodology that aids in identifying locations where a greater concentration of an activity takes place and this hotspot mapping serves as a key component of crime prediction.
 ### 1.1.1 Purpose
